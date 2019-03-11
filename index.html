@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Habilidades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <section id="containerDeTudo">
+
+    <section class="menuVersao">
+      <div onclick="escolherVersão('3.5')">
+        <input type="checkbox" name="3.5" id="3.5" checked>
+        <label for="3.5">D&D 3.5</label>
+      </div>
+      <div onclick="escolherVersão('pathfinder')">
+        <input type="checkbox" name="pathfinder" id="pathfinder">
+        <label for="pathfinder">Pathfinder</label>
+      </div>
+    </section>
+
+    <section id="escolherPts">
+      <ul class="wrapper-menu">
+        <li class="wrapper-dropdown">
+          <div id="racaAtual">Humano</div>
+          <ul class="dropdown">
+            <li id="anao" onclick="escolherRaca(id)">Anão</li>
+            <li id="elfo" onclick="escolherRaca(id)">Elfo</li>
+            <li id="gnomo" onclick="escolherRaca(id)">Gnomo</li>
+            <li id="humano" onclick="escolherRaca(id)">Humano</li>
+            <li id="halfling" onclick="escolherRaca(id)">Halfling</li>
+            <li id="meio-elfo" onclick="escolherRaca(id)">Meio-Elfo</li>
+            <li id="meio-orc" onclick="escolherRaca(id)">Meio-Orc</li>
+            <li id="outro" onclick="escolherRaca(id)">Outro</li>
+          </ul>
+        </li>
+        <li class="wrapper-dropdown">
+          <div id="nvCampanha">Padrão: 25 pts</div>
+          <ul class="dropdown" id="niveisCampanha">
+            <li onclick="pontosCampanha(15)">Reduzido: 15 pts</li>
+            <li onclick="pontosCampanha(18)">Desafiador: 18 pts</li>
+            <li onclick="pontosCampanha(25)">Padrão: 25 pts</li>
+            <li onclick="pontosCampanha(22)">Difícil: 22 pts</li>
+            <li onclick="pontosCampanha(32)">Elevado: 32 pts</li>
+            <li onclick="pontosCampanha(0)">Outro</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <table class="tg" style="table-layout: fixed; width: 170px">
+      <colgroup>
+        <col style="width: 45px">
+        <col style="width: 40px">
+        <col style="width: 40px">
+        <col style="width: 30px">
+        <col style="width: 30px">
+        <col style="width: 40px">
+      </colgroup>
+      <tr>
+        <td class="habilidade">FOR</td>
+        <td class="valorHab" id="for">8</td>
+        <td class="valorHab" id="forMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('for')">+</td>
+        <td class="subtrair" onclick="subtrairHab('for')">-</td>
+        <td class="modRacial"><img id="forRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('for'), racaDoisEmUmHab('for')"></td>
+      </tr>
+      <tr>
+        <td class="habilidade">DES</td>
+        <td class="valorHab" id="des">8</td>
+        <td class="valorHab" id="desMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('des')">+</td>
+        <td class="subtrair" onclick="subtrairHab('des')">-</td>
+        <td class="modRacial"><img id="desRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('des'), racaDoisEmUmHab('des')"></td>
+      </tr>
+      <tr>
+        <td class="habilidade">CON</td>
+        <td class="valorHab" id="con">8</td>
+        <td class="valorHab" id="conMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('con')">+</td>
+        <td class="subtrair" onclick="subtrairHab('con')">-</td>
+        <td class="modRacial"><img id="conRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('con'), racaDoisEmUmHab('con')"></td>
+      </tr>
+      <tr>
+        <td class="habilidade">INT</td>
+        <td class="valorHab" id="int">8</td>
+        <td class="valorHab" id="intMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('int')">+</td>
+        <td class="subtrair" onclick="subtrairHab('int')">-</td>
+        <td class="modRacial"><img id="intRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('int'), racaDoisEmUmHab('int')"></td>
+      </tr>
+      <tr>
+        <td class="habilidade">SAB</td>
+        <td class="valorHab" id="sab">8</td>
+        <td class="valorHab" id="sabMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('sab')">+</td>
+        <td class="subtrair" onclick="subtrairHab('sab')">-</td>
+        <td class="modRacial"><img id="sabRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('sab'), racaDoisEmUmHab('sab')"></td>
+      </tr>
+      <tr>
+        <td class="habilidade">CAR</td>
+        <td class="valorHab" id="car">8</td>
+        <td class="valorHab" id="carMod">-1</td>
+        <td class="adiconar" onclick="adicionarHab('car')">+</td>
+        <td class="subtrair" onclick="subtrairHab('car')">-</td>
+        <td class="modRacial"><img id="carRacial" src="img/modRacVazio.svg"
+            onclick="modRacOutro('car'), racaDoisEmUmHab('car')"></td>
+      </tr>
+    </table>
+    <div id="ptsAtual">25</div>
+  </section>
+
+</body>
+
+</html>

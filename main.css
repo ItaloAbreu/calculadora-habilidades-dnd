@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+#containerDeTudo {
+    width: 284px;
+    height: 330px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: #220c00;
+}
+
+/* ############### VERSÃO ############### */
+.menuVersao {
+    display: inline-block;
+    align-self: auto;
+    background-color: #faf6ea;
+    border-top: 1px solid #220c00;
+    border-bottom: 2px solid #220c00;
+    width: 100%;
+    height: 33px;
+    list-style: none;
+    list-style-type: none;
+}
+
+.menuVersao div {
+    background-color: #faf6ea;
+    float: left;
+    margin: 0%;
+    width: 142px;
+    height: 25px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuVersao div:hover{
+    cursor: pointer;
+    color: #faf6ea;
+    background-color: #220c00;
+}
+
+/* ################ MENU ################ */
+#escolherPts ul{
+    padding: 0;
+    list-style: none;
+}
+  
+#escolherPts ul li{
+    list-style-type: none;
+    padding: 7px 0px;
+    margin: 0;
+    text-align: center;
+}
+
+#escolherPts ul li:hover{
+    cursor: pointer;
+}
+
+#escolherPts .dropdown li:hover{
+    background-color:#220c00;
+    color:#fff4d6;
+}
+  
+.wrapper-menu{
+    padding: 0;
+    margin: 3px 0px;
+    position: relative;
+}
+  
+.dropdown{
+    width: 138px;
+    background-color: #faf6ea;
+    color: #220c00;
+    border: 1px solid #220c00;
+    border-top: 0;
+    align-content: center;
+    position: absolute;
+    display: none;
+}
+
+.wrapper-dropdown {
+    width: 140px;
+    display: inline-block;
+}
+
+.wrapper-dropdown div{
+    padding-top: 9px;
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    background-color:#220c00;
+    color:#fff4d6;
+ }
+
+.wrapper-dropdown:hover > .dropdown{
+    display:block;
+ }
+
+/* ################ PONTOS ################ */
+#ptsAtual {
+    float: right;
+    width: 50px;
+    height: 33px;
+    padding-top: 3px;
+    border: 1px solid #220c00;
+    border-bottom: 7px solid #220c00;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+#em-espera div {
+    float: right;
+    width: 52px;
+    height: 40px;
+    margin-top: 2px;
+    background-color:#67fd9a;
+    color:#009901;
+    border-color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#em-espera div:hover{
+    cursor: pointer;
+    background-color:#bcffd2;
+    color:#015a26;
+}
+
+#em-espera div:active{
+    background-color:#015a26;
+    color:#bcffd2;
+}
+
+/* ############# HABILIDADES ############# */
+.tg{
+    float: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td{
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+}
+
+.tg .modRacial {
+    border-style:solid;
+    border-width:1px;
+    border-color:#ffffff;
+    overflow:hidden;
+    word-break:normal;
+    padding: 0;
+}
+
+.tg .modRacial img{
+    background-image: url(img/modRacVazio.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-self: center;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    margin-left: 7px;
+    padding: 0;
+    border: 0;
+}
+
+.tg .adiconar{
+    background-color:#67fd9a;
+    color:#009901;
+    border-color:#ffffff;
+    text-align:center;
+    vertical-align:top;
+}
+
+.tg .subtrair{
+    background-color:#fd6864;
+    color:#9a0000;
+    border-color:#ffffff;
+    text-align:center;
+    vertical-align:top;
+}
+
+.tg .adiconar:hover{
+    cursor: pointer;
+    background-color:#bcffd2;
+    color:#015a26;
+}
+
+.tg .adiconar:active{
+    background-color:#015a26;
+    color:#bcffd2;
+}
+
+.tg .subtrair:hover{
+    cursor: pointer;
+    background-color:#ffaeac;
+    color:#330000;
+}
+
+.tg .subtrair:active{
+    background-color:#330000;
+    color:#ffaeac;
+}
+
+.tg .valorHab{
+    background-color:#f7f7ff;
+    border-color:#ffffff;
+    text-align:center;
+    vertical-align:top
+}
+
+.tg .habilidade{
+    background-color:#220c00;
+    color:#fff4d6;
+    border-color:#ffffff;
+    text-align:center;
+    vertical-align:top
+}

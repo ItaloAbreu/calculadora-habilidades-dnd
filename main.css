@@ -42,23 +42,23 @@
 }
 
 /* ################ MENU ################ */
-#escolherPts ul{
+#navMenu ul{
     padding: 0;
     list-style: none;
 }
   
-#escolherPts ul li{
+#navMenu ul li{
     list-style-type: none;
     padding: 7px 0px;
     margin: 0;
     text-align: center;
 }
 
-#escolherPts ul li:hover{
+#navMenu ul li:hover{
     cursor: pointer;
 }
 
-#escolherPts .dropdown li:hover{
+#navMenu .dropdown li:hover{
     background-color:#220c00;
     color:#fff4d6;
 }

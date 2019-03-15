@@ -1,4 +1,4 @@
-function importScript(script){
+function importScript(script) {
     const importedScript = document.createElement('script')
     importedScript.src = script
     document.head.appendChild(importedScript)
@@ -65,8 +65,8 @@ function pontosCampanha(novoPts) {
 
 function ptsOutro() {
     let max = null
-    if (versao === '3.5') {max = 96}
-    if (versao === 'pathfinder') {max = 102}
+    if (versao === '3.5') { max = 96 }
+    if (versao === 'pathfinder') { max = 102 }
     let novoPts = parseInt(document.getElementById('ptsAtual').value)
     if (novoPts > max) { novoPts = max }
     if (novoPts < 0) { novoPts = 0 }
@@ -95,7 +95,7 @@ function adicionarPontos(custo) {
 }
 
 function subtrairPontos(custo) {
-    if (custo < 0){
+    if (custo < 0) {
         custo *= -1
     }
     pts -= custo
@@ -121,6 +121,10 @@ function atualizarHab(hab) {
         document.getElementById(hab).style = 'color: red; font-weight:bold'
         document.getElementById(hab + 'Mod').style = 'color: red; font-weight:bold'
         document.getElementById(hab + 'Racial').src = 'img/modRac2n.svg'
+    } else if (racaAtual === 'outro' || checkRacaDoisEmUmHab()) {
+        document.getElementById(hab).style = 'color: black'
+        document.getElementById(hab + 'Mod').style = 'color: black'
+        document.getElementById(hab + 'Racial').src = 'img/modRacVazioClicavel.svg'
     } else {
         document.getElementById(hab).style = 'color: black'
         document.getElementById(hab + 'Mod').style = 'color: black'
@@ -146,7 +150,7 @@ function checarAdicao(valorAtual) {
 
 function adicionarHab(hab) {
     if (habilidades.atual[hab] < 18 && checarAdicao(habilidades.atual[hab])) {
-        if (custoPts[versao][habilidades.atual[hab] + 1] <= 0){
+        if (custoPts[versao][habilidades.atual[hab] + 1] <= 0) {
             subtrairPontos(custoPts[versao][habilidades.atual[hab]])
         } else {
             subtrairPontos(custoPts[versao][habilidades.atual[hab] + 1])
@@ -161,13 +165,13 @@ function subtrairHab(hab) {
         if (custoPts[versao][habilidades.atual[hab]] == 0) {
             adicionarPontos(1)
         } else if (custoPts[versao][habilidades.atual[hab]] < 0) {
-            adicionarPontos((custoPts[versao][habilidades.atual[hab] - 1])*-1)
+            adicionarPontos((custoPts[versao][habilidades.atual[hab] - 1]) * -1)
         } else {
             adicionarPontos(custoPts[versao][habilidades.atual[hab]])
         }
         habilidades.atual[hab] -= 1
         atualizarHab(hab)
-    }    
+    }
 }
 
 // ##### RAÇA #####
@@ -194,12 +198,12 @@ function modRacOutro(hab) {
 
 function checkRacaDoisEmUmHab() {
     let racasDoisPts = ['humano', 'meio-elfo', 'meio-orc']
-    if (racasDoisPts.includes(racaAtual) && versao === 'pathfinder'){
+    if (racasDoisPts.includes(racaAtual) && versao === 'pathfinder') {
         return true
     } else return false
 }
 
-function racaDoisEmUmHab(hab){
+function racaDoisEmUmHab(hab) {
     if (checkRacaDoisEmUmHab()) {
         zerarModRac()
         modRacial[hab] = 2
@@ -219,6 +223,16 @@ function escolherRaca(id) {
         atualizarHab(key)
     }
     mouseNoModRac()
+}
+
+function mouseHover(value, hab) {
+    if (racaAtual === 'outro' || checkRacaDoisEmUmHab()) {
+        if (value && modRacial[hab] == 0) {
+            document.getElementById(hab + 'Racial').src = 'img/modRacVazioClicavelHover.svg'
+        } else if (!value && modRacial[hab] == 0){
+            document.getElementById(hab + 'Racial').src = 'img/modRacVazioClicavel.svg'
+        }
+    }
 }
 
 function mouseNoModRac() {

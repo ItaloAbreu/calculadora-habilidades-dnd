@@ -161,9 +161,6 @@
 }
 
 .tg .modRacial img{
-    background-image: url(img/modRacVazio.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
     align-self: center;
     width: 28px;
     height: 28px;
